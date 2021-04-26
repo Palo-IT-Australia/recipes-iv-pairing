@@ -1,6 +1,8 @@
+import { RecipeServiceImpl } from "./RecipeService";
+
 describe('Recipe Service tests', () => {
 	it('should add a new recipe', () => {
-		console.log('hi')
-		expect(true).toBe(true)
+		const recipe = new RecipeServiceImpl().saveRecipe("1", "good size")
+		expect(recipe).not.toBe(undefined)
 	});
 });

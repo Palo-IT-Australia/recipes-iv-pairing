@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
 import { RecipeServiceImpl } from "./recipe/RecipeService";
 
 class App {
@@ -12,7 +12,7 @@ class App {
 
   private mountRoutes(): void {
     const router = express.Router();
-    router.get('/', (req, res) => {
+    router.get('/', (req: Request, res: Response) => {
       res.json(this.recipeService.getPopularRecipes(4));
     });
 

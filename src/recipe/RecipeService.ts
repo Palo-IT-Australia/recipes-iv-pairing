@@ -1,4 +1,6 @@
 import { Recipe } from "./models/recipe";
+import { RecipeRepository } from "./repository/RecipeRepository";
+import { InMemoryRecipeRepository } from "./repository/InMemoryRecipeRepository";
 
 export class RecipeServiceImpl implements RecipeService {
 	private readonly repository: RecipeRepository
