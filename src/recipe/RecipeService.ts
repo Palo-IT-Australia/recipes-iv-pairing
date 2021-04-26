@@ -1,31 +1,30 @@
-import { InMemoryRecipeRepository, RecipeRepository } from './RecipeRepository'
+import { Recipe } from "./models/recipe";
 
-class RecipeServiceImpl implements RecipeService {
+export class RecipeServiceImpl implements RecipeService {
 	private readonly repository: RecipeRepository
 
 	constructor() {
-	  this.repository = new InMemoryRecipeRepository();
-	}
-
-	addReview(recipeId: string, review: Review): Recipe {
-	  return this.repository.addReview(recipeId, review);
+		this.repository = new InMemoryRecipeRepository()
 	}
 
 	saveRecipe(accountId: string, description: string): Recipe {
-	  const recipe = new Recipe(description);
-	  this.repository.saveRecipe(recipe, accountId);
-	  return recipe;
+		return undefined;
+	}
+
+	getPopularRecipes(minAverageRating: number): Recipe[] {
+		return [];
+	}
+
+	addRating(recipeId: string, rating: number, dateTime: Date): Recipe {
+		return undefined;
 	}
 }
-
 
 interface RecipeService {
 
 	saveRecipe(accountId: string, description: string): Recipe
 
-	addReview(recipeId: string, review: Review): Recipe
+	addRating(recipeId: string, rating: number, dateTime: Date): Recipe
 
-	// getAllRecipes(accountId: string): Recipe[]
-
-	// viewReviews(recipeId: string): Review[]
+	getPopularRecipes(minAverageRating: number): Recipe[]
 }

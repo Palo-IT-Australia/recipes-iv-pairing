@@ -1,7 +1,9 @@
 import express from 'express';
+import { RecipeServiceImpl } from "./recipe/RecipeService";
 
 class App {
   public app: any
+  private recipeService = new RecipeServiceImpl()
 
   constructor() {
     this.app = express();
@@ -11,7 +13,7 @@ class App {
   private mountRoutes(): void {
     const router = express.Router();
     router.get('/', (req, res) => {
-      res.json({ message: 'hi' });
+      res.json(this.recipeService.getPopularRecipes(4));
     });
 
     this.app.use('/', router);
