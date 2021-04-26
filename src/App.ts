@@ -12,6 +12,7 @@ class App {
 
   private mountRoutes(): void {
     const router = express.Router();
+
     router.get('/', (req: Request, res: Response) => {
       res.json(this.recipeService.getPopularRecipes(4));
     });
