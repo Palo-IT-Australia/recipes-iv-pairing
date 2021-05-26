@@ -4,8 +4,8 @@ This repo contains an unfinish project of an food blog api. The project deadline
 
 ## TODO
 
-1. Users would like to add new recepies to the in memory
-2. Users would like to vote for their favourite revepies
+1. Users would like to add new recepies
+2. Users would like to vote for their favourite recepies
 3. Users would like to be able to see the most popular recepies
 
 ## How to run
