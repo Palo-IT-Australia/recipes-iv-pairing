@@ -1,6 +1,6 @@
 # Palo IT coding pairing challenge
 
-This repo contains an unfinish project of an food blog api. The project dedlaline is yesterday. Can you help finish it in time ?
+This repo contains an unfinish project of an food blog api. The project deadline is yesterday. Can you help finish it in time ?
 
 ## TODO
 
