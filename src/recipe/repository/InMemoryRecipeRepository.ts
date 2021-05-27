@@ -1,8 +1,10 @@
-import { RecipeRepository } from "./RecipeRepository";
-import { Recipe } from "../models/recipe";
+import { RecipeRepository } from './RecipeRepository'
+import { Recipe } from '../models/recipe'
 
 export class InMemoryRecipeRepository implements RecipeRepository {
-	getRecipes(): Recipe[] {
-		return [];
-	}
+  recipes: Recipe[] = []
+
+  getRecipes(): Recipe[] {
+    return this.recipes
+  }
 }
