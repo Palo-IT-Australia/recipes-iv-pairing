@@ -9,6 +9,10 @@ export class RecipeServiceImpl implements RecipeService {
     this.repository = new InMemoryRecipeRepository()
   }
 
+	getUserRecipes(accountId: string): [] {
+		return [];
+	}
+
   saveRecipe(accountId: string, description: string): Recipe {
     return undefined
   }
@@ -25,7 +29,9 @@ export class RecipeServiceImpl implements RecipeService {
 interface RecipeService {
   saveRecipe(accountId: string, description: string): Recipe
 
-  addRating(recipeId: string, rating: number, dateTime: Date): Recipe
+	getUserRecipes(accountId: string): Recipe[]
+
+	addRating(recipeId: string, rating: number, dateTime: Date): Recipe
 
   getPopularRecipes(minAverageRating: number): Recipe[]
 }
